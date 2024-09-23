@@ -328,7 +328,7 @@ public with sharing class ATKCoreTest {
         matrix.add(ATKCore.EntityNodeType.MANY_TO_ONE, Account.SObjectType, Case.AccountId);
         matrix.add(ATKCore.EntityNodeType.ONE_TO_MANY, new ATKCore.EntityNode(Contact.SObjectType, 3), Contact.AccountId);
         matrix.add(ATKCore.EntityNodeType.MANY_TO_ONE, new ATKCore.EntityNode(User.SObjectType, 3), Contact.OwnerId);
-        matrix.currEntityNode.addField(Contact.CreatedDate);
+        matrix.currEntityNode.addField(User.CreatedDate);
         matrix.currEntityNode.currEntityField.fixedValue = Datetime.newInstance(2020, 1, 1);
 
         generator.generate(matrix, false);

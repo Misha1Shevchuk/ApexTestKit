@@ -526,7 +526,7 @@ public with sharing class ATKTest {
         ATK.SaveResult result = ATK.prepare(Account.SObjectType, 10)
             .withChildren(Case.SObjectType, Case.AccountId, 40)
                 .withParents(User.SObjectType, Case.OwnerId, 40)
-                    .field(Account.CreatedDate).repeat(Datetime.newInstance(2020, 1, 1))
+                    .field(User.CreatedDate).repeat(Datetime.newInstance(2020, 1, 1))
                 .also()
                 .withParents(Contact.SObjectType, Case.ContactId, 20)
                     .withParents(Account.SObjectType, Contact.AccountId)
